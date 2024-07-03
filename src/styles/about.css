@@ -1,0 +1,35 @@
+
+.container-logo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+    grid-auto-flow: row;
+    margin-top: 6rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .container-logo2 {
+   margin: 0 28px;
+  }
+  
+  .about-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .textarea-lg-mod {
+    padding-left: 1.5rem /* 24px */;
+    padding-right: 1.5rem /* 24px */;
+    padding-top: 1rem /* 16px */;
+    padding-bottom: 1rem /* 16px */;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    line-height: 2;
+    max-width: 50%;
+  }
