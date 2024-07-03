@@ -1,12 +1,15 @@
 import { webProjects } from "@/data/project";
+import Layout from "@/styles/Layout";
+import useTheme from "@/hook/theme";
 
 export default function Works() {
+  const [theme, toggleTheme] = useTheme();
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
 
   return (
-    <>
+    <Layout theme={theme} toggleTheme={toggleTheme}>
       <div className="flex justify-center items-center mt-24 mb-24   flex-wrap flex-row">
         <div className="flex flex-col w-3/4 ">
           <h1 className="text-5xl font-bold w-full">Web Works</h1>
@@ -44,6 +47,6 @@ export default function Works() {
           <h1 className="text-5xl font-bold w-full">Video Games</h1>
         </div>
       </div> */}
-    </>
+    </Layout>
   );
 }

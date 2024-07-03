@@ -1,8 +1,8 @@
-import drum from "../media/pictures/drummachine.jpg"
-import calorie from "../media/pictures/caloriecounter.jpg"
-import dash from "../media/pictures/Dash.jpg"
-import calculator from "../media/pictures/calculator.jpg"
-import dice from "../media/pictures/dice.jpg"
+import drum from "../../public/pictures/drummachine.jpg"
+import calorie from "../../public/pictures/caloriecounter.jpg"
+import dash from "../../public/pictures/Dash.jpg"
+import calculator from "../../public/pictures/calculator.jpg"
+import dice from "../../public/pictures/dice.jpg"
 
 export const webProjects = [
     {
