@@ -1,6 +1,7 @@
 import { webProjects } from "@/data/project";
 import Layout from "@/styles/Layout";
 import useTheme from "@/hook/theme";
+import Image from "next/image";
 
 export default function Works() {
   const [theme, toggleTheme] = useTheme();
@@ -25,7 +26,7 @@ export default function Works() {
           <article className="media">
             <div className="media-left h-full my-auto mx-4 order-last md:order-first">
               <figure className="image is-64x64">
-                <img src={project.url} alt="" />
+                <Image src={project.url} alt={`picture about my project ${project.name}`} width={70} height={70}/>
               </figure>
             </div>
             <div className="media-content">
