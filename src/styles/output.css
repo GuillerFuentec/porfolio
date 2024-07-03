@@ -1,21 +1,3 @@
-[data-theme="light"] {
-  --text-color: #000000;
-  --border-color: #000000;
-}
-
-[data-theme="dracula"] {
-  --text-color: #6272a4;
-  --border-color: #6272a4;
-}
-
-.text-accent {
-  color: var(--text-color);
-}
-
-.border-accent {
-  border-color: var(--border-color);
-}
-
 .layout {
   height: auto;
   width: auto;

@@ -5,7 +5,6 @@ import { useFormik, FormikProvider } from "formik";
 import useTheme from "@/hook/theme";
 import Layout from "@/styles/Layout";
 import { usePhoneNumberValidation } from "@/hook/forms_validator";
-import Textarea from "./textarea";
 
 export default function Contact() {
   const [theme, toggleTheme] = useTheme();
@@ -48,14 +47,17 @@ export default function Contact() {
   return (
     <Layout theme={theme} toggleTheme={toggleTheme}>
       <div className="w-full block justify-center hero mt-4">
-        <div className="w-3/4 my-28 mx-auto text-accent px-5 py-8 border border-accent rounded-xl">
+        <div
+          className={`w-3/4 my-28 mx-auto text-accent px-5 py-8 border border-accent rounded-xl ${
+            theme === "light"
+              ? "border-black text-black ring-black focus:ring-black"
+              : "border-gray-300 text-accent ring-gray-300 focus:ring-indigo-600"
+          }`}
+        >
           <FormikProvider value={formik}>
-            <form
-              onSubmit={formik.handleSubmit}
-              className="rounded-sm px-7 py-4"
-            >
+            <form onSubmit={formik.handleSubmit} className="px-7 py-4">
               <div className="space-y-4">
-                <div className="border-b rounded-sm border-accent pb-4 mb-4">
+                <div className="border-accent border-b pb-4 mb-4">
                   <h2
                     className={`flex text-base font-semibold leading-7 text-accent ${
                       theme === "light" ? "text-black" : "text-accent"
@@ -80,7 +82,7 @@ export default function Contact() {
                       theme === "light" ? "text-black" : "text-accent"
                     }`}
                   >
-                    Let me know more about how I could help you.
+                    Let me know more about how I can help you.
                   </p>
                 </div>
               </div>
@@ -188,7 +190,7 @@ export default function Contact() {
               </div>
               {/* Company */}
               <div>
-                <label htmlFor="company" className={labelClassNames}>
+                <label htmlFor="company" className={`-mt-4 ${labelClassNames}`}>
                   Company
                   <div className="relative mt-2 rounded-md shadow-sm">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -216,7 +218,28 @@ export default function Contact() {
                 </label>
               </div>
               {/* Textarea */}
-              <Textarea />
+              <div>
+                <p
+                  className={`mt-1 text-sm leading-6 text-accent ${
+                    theme === "light" ? "text-black" : "text-accent"
+                  }`}
+                >
+                  Tell me about
+                </p>
+                <div className="relative mt-2 rounded-md shadow-sm">
+                  <textarea
+                    rows={4}
+                    name="comment"
+                    id="comment"
+                    className={`block w-full rounded-md border border-gray-300 bg-transparent py-1.5 pl-10 text-accent ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                      theme === "light"
+                        ? "border-black text-black ring-black focus:ring-black"
+                        : "border-gray-300 text-accent ring-gray-300 focus:ring-indigo-600"
+                    }`}
+                    defaultValue={""}
+                  />
+                </div>
+              </div>
               <div className="border-t border-accent pt-4 mt-5"></div>
               <button type="submit" className={buttonClassNames}>
                 Submit

@@ -130,6 +130,7 @@ export default function HeaderNav({toggleTheme}) {
                                   Contact Us
                                 </a>
                               </li>
+                              <div className="border-b border-black mx-3"/>
                               <li>
                                 <a
                                   href="/privacity"
