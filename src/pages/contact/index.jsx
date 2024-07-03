@@ -2,12 +2,10 @@ import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useFormik, FormikProvider } from "formik";
-import useTheme from "@/hook/theme";
 import Layout from "@/styles/Layout";
 import { usePhoneNumberValidation } from "@/hook/forms_validator";
 
-export default function Contact() {
-  const [theme, toggleTheme] = useTheme();
+export default function Contact({theme}) {
   const { validationSchema } = usePhoneNumberValidation();
 
   const formik = useFormik({
@@ -45,7 +43,7 @@ export default function Contact() {
   }`;
 
   return (
-    <Layout theme={theme} toggleTheme={toggleTheme}>
+    <Layout>
       <div className="w-full block justify-center hero mt-4">
         <div
           className={`w-3/4 my-28 mx-auto text-accent px-5 py-8 border border-accent rounded-xl ${

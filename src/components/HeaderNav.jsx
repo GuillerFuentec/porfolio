@@ -1,9 +1,12 @@
+// components/HeaderNav.js
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import switcher from "../../public/switcher.svg"
-// ToggleTheme 
-export default function HeaderNav({toggleTheme}) {
+import switcher from "../../public/switcher.svg";
+import { useTheme } from "@/hook/context_theme";
+
+export default function HeaderNav() {
+  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -18,7 +21,6 @@ export default function HeaderNav({toggleTheme}) {
     }
   };
 
-  // Función para manejar el scroll
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
@@ -36,10 +38,10 @@ export default function HeaderNav({toggleTheme}) {
   }, [isOpen, prevScrollPos]);
 
   const menuRef = useRef(null);
+
   return (
-    // Aqui empieza el navabar
     <nav
-      className={`fixed -top-7 -left-16 w-full  transition z-50 ${
+      className={`fixed -top-7 -left-16 w-full transition z-50 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -49,22 +51,15 @@ export default function HeaderNav({toggleTheme}) {
             <div className="relative px-4 sm:px-8 lg:px-12">
               <div className="mx-auto max-w-2xl lg:max-w-5xl">
                 <div className="relative flex gap-4 justify-center">
-                  {" "}
-                  {/* Add justify-center here */}
                   <div className="flex flex-1"></div>
                   <div className="flex flex-1 justify-end md:justify-center">
                     <div
                       ref={menuRef}
                       className="btn-group dropstart sm:block md:hidden"
-                      data-headlessui-state=""
                     >
                       <button
                         onClick={toggleMenu}
                         className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
-                        type="button"
-                        aria-expanded="false"
-                        data-headlessui-state=""
-                        id="headlessui-popover-button-:Rbmiqja:"
                       >
                         Menu
                         <svg
@@ -82,7 +77,7 @@ export default function HeaderNav({toggleTheme}) {
                         </svg>
                       </button>
                       {isOpen && (
-                        <div className="absolute  top-8 right-10 mt-2 w-60 rounded-md shadow-lg">
+                        <div className="absolute top-8 right-10 mt-2 w-60 rounded-md shadow-lg">
                           <i
                             className="bi bi-x-square-fill absolute top-0 right-2 text-red-500"
                             onClick={toggleMenu}
@@ -130,7 +125,7 @@ export default function HeaderNav({toggleTheme}) {
                                   Contact Us
                                 </a>
                               </li>
-                              <div className="border-b border-black mx-3"/>
+                              <div className="border-b border-black mx-3" />
                               <li>
                                 <a
                                   href="/privacity"
@@ -144,7 +139,7 @@ export default function HeaderNav({toggleTheme}) {
                                   href="/security"
                                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                 >
-                                  Secury
+                                  Security
                                 </a>
                               </li>
                             </ul>
@@ -199,23 +194,22 @@ export default function HeaderNav({toggleTheme}) {
                       </ul>
                     </nav>
                   </div>
-                   <div className="flex justify-end md:flex-1">
-                   <div className="pointer-events-auto">
+                  <div className="flex justify-end md:flex-1">
+                    <div className="pointer-events-auto">
                       <button
                         type="button"
                         aria-label="Switch to dark theme"
                         className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                         onClick={toggleTheme}
                       >
-
                         <Image
                           className="mask mask-circle icon"
-                          alt="it's a switcher icon for change the de theme"
+                          alt="it's a switcher icon for change the theme"
                           src={switcher}
                         />
                       </button>
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>

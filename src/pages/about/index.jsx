@@ -6,12 +6,10 @@ import {
   devCertifications,
   toolsAndSoftSkillsCertifications,
 } from "../../data/certifications";
-import useTheme from "@/hook/theme";
 
 export default function About() {
-  const [theme, toggleTheme] = useTheme();
   return (
-    <Layout theme={theme} toggleTheme={toggleTheme}>
+    <Layout>
       <div className="flex justify-center items-center mt-14">
         <div className="container-logo flex flex-col items-center">
           <div className="refill1"></div>
