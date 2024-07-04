@@ -127,8 +127,7 @@ export default function About() {
                         <div className="divider" />
                       </ul>
                     );
-                  })}
-                  
+                  })}            
                   <div className="my-10">
                     <h2 className="text-xl font-bold mb-2">-Certifications</h2>
                     <ul>
