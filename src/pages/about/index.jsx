@@ -22,9 +22,8 @@ export default function About() {
               priority
             />
             <div className="flex flex-col items-center mt-3">
-              <h2 className="font-bold">Jr Software Developer</h2>
-              <h4>Hi there 👋</h4>
-              <h4>I am Copello, a passionate React Web developer</h4>
+              <h2 className="font-bold">Hi there 👋</h2>
+              <h4>Jr Software Developer</h4>
               <div>
                 <button className="btn btn-accent join-item my-4">
                   Download CV
@@ -43,16 +42,18 @@ export default function About() {
               <div className="mt-8">
                 <div>
                   <h2 className="text-xl font-bold mb-2">-Profile</h2>
-                  <p className="mb-10">
-                    I’m a self-taught software developer with two years of
-                    experience in web development. As a frontend developer, I
-                    work with languages such as C#, JavaScript, HTML, CSS,
-                    React, Redux, NextJS, Vite, ASP.Net, and the .Net ecosystem.
-                    I also work with Unity Engine, MonoBeheviour API and handle
-                    tools like Blender, FL Studio, Photoshop, and Adobe
-                    Premiere. Although design is not my strong suit, I strive to
-                    improve every day
+                  <p className="mb-4">
+                    I am Copello, a passionate React Web developer and with a
+                    notion of creating scripts for Unity 3D Engine, and I
+                    currently work as a freelancer doing very simple jobs like
+                    landing pages. I have a deep love for programming.
                   </p>
+                  <p className="mb-10">
+                I am currently working on <a>cnadted.com</a>, some jobs and
+                orders from my esteemed clients and expanding my skills learning
+                JavaScript and React. All my projects are available on
+                <a>Github</a>.
+              </p>
                 </div>
                 <div className="mb-10">
                   <h2 className="text-xl font-bold mb-2">-Education</h2>
@@ -105,17 +106,13 @@ export default function About() {
                           {"design" in experience ? (
                             <>
                               <h3 className="mt-8">Design:</h3>
-                              <p className="mt-2 mb-6">
-                                {experience.design}
-                              </p>
+                              <p className="mt-2 mb-6">{experience.design}</p>
                             </>
                           ) : null}
                           {"funtionality" in experience ? (
                             <>
                               <h3 className="mt-8">Functionality:</h3>
-                              <p className="mt-2 mb-6">
-                                {experience.design}
-                              </p>
+                              <p className="mt-2 mb-6">{experience.design}</p>
                             </>
                           ) : null}
                           <h5 className="mt-2 mb-2">Technologies used:</h5>

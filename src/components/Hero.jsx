@@ -19,54 +19,35 @@ export default function Hero() {
               Software Developer Freelancer
             </h1>
             <div className="mt-8">
-              <p className="py-6">
-                I am Copello, a passionate React Web developer and with a notion
-                of creating scripts for Unity 3D Engine, and I currently work as
-                a freelancer doing very simple jobs like landing pages. I have a
-                deep love for programming.
+              <p className="py-1">
+                I’m a j unior software developer with two years of
+                experience in web development. As a frontend developer, I work
+                with languages such as C#, JavaScript, HTML, CSS, React, Redux,
+                NextJS, Vite, ASP.Net, and the .Net ecosystem. I also work with
+                Unity Engine, MonoBeheviour API and handle tools like Blender,
+                FL Studio, Photoshop Adobe Premiere etc. Although design is not
+                my strong suit, I strive to improve every day
               </p>
-              {/* <p>
+              <p className="py-4">
                 I am currently working on <a>cnadted.com</a>, some jobs and
                 orders from my esteemed clients and expanding my skills learning
                 JavaScript and React. All my projects are available on
                 <a>Github</a>.
               </p>
-              <p>
-                <br />
-                I have experience with vite.js, next.js and express.js and web
-                development with vanilla HTML, CSS and JS.
-              </p>
-              <p className="">
-                <span className="resalted-text">My aspirations</span> are to
-                become a <span className="resalted-text">FullStack</span>
-                web developer, fully mastering technologies such as{" "}
-                <span className="resalted-text">entity framework ORM</span>,
-                <span className="resalted-text">ASP.NET</span>, development of{" "}
-                <span className="resalted-text">API and Rest API</span>,
-                <span className="resalted-text">Blazor</span>,{" "}
-                <span className="resalted-text">Razor</span>,{" "}
-                <span className="resalted-text">React Framework</span>,{" "}
-                <span className="resalted-text">Bootstrap</span> and upcoming
-                technologies that contribute to the efficiency and acceleration
-                of technological development, as long as they are reliable,
-                secure and accessible to users.
-                <br />
-                <br />
-              </p> */}
-              <span className="resalted-text">
+              <span className="py-4">
                 I regularly write articles on my website
               </span>
               , where I share my knowledge and experiences.
               <br />
               <br />I am someone who is constantly learning and growing along
               with the technology industry.{" "}
-              <span className="resalted-text email" id="bio-contact-me">
+              <span className="py-4" id="bio-contact-me">
                 Contact me
               </span>
               , I am excited to bring my skills and passion to your team or
               projects.
             </div>
-            <div className="">
+            <div className="py-4">
               <button className="btn btn-accent join-item my-4 ">
                 Download CV
               </button>

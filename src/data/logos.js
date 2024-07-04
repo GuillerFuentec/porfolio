@@ -3,7 +3,7 @@ export const logos = [
     { href: 'https://getbootstrap.com', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg', alt: 'bootstrap' },
     { href: 'https://www.w3schools.com/cs/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg', alt: 'csharp' },
     { href: 'https://www.w3schools.com/css/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg', alt: 'css3' },
-    { href: 'https://www.docker.com/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg', alt: 'docker' },
+    // { href: 'https://www.docker.com/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg', alt: 'docker' },
     { href: 'https://dotnet.microsoft.com/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg', alt: 'dotnet' },
     { href: 'https://git-scm.com/', src: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg', alt: 'git' },
     { href: 'https://www.w3.org/html/', src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg', alt: 'html5' },
@@ -15,4 +15,7 @@ export const logos = [
     { href: 'https://unity.com/', src: 'https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg', alt: 'unity' },
     { href: 'https://vitejs.dev/', src: 'https://vitejs.dev/logo.svg', alt: 'vite' },
     { href: 'https://redux.js.org/', src: 'https://miro.medium.com/v2/resize:fit:500/1*tOI6UC5EaS2fPItCesI-AQ.png', alt: 'React Redux' },
+    { href: 'https://nextjs.org/', src: 'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png', alt: 'NextJs' },
+    { href: 'https://www.hostinger.com/', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUToKOitFZGoaNcbQRGnux82pUwSTbSb9r4A&s', alt: 'Hostinguer' },
+    { href: 'https://vercel.com/', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxb3zO75iHwUWgYBm-cKKgX1HYqo_4C5vY0A&s', alt: 'Vercel' },
   ];
