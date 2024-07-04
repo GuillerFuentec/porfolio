@@ -1,8 +1,11 @@
 import { webProjects } from "@/data/project";
 import Layout from "@/styles/Layout";
 import Image from "next/image";
+import { useTheme } from "@/hook/context_theme";
+import { use } from "react";
 
 export default function Works() {
+  const {theme} = useTheme();
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
@@ -22,15 +25,22 @@ export default function Works() {
           onClick={() => handleClick(project.href)}
         >
           <article className="media">
-            <div className="media-left h-full my-auto mx-4 order-last md:order-first">
+            <div className="media-left h-full my-auto mx-4 align-middle order-last md:order-first">
               <figure className="image is-64x64">
-                <Image src={project.url} alt={`picture about my project ${project.name}`} width={70} height={70}/>
+                <Image
+                  src={project.url}
+                  alt={`picture about my project ${project.name}`}
+                  width={70}
+                  height={70}
+                />
               </figure>
             </div>
             <div className="media-content">
               <div className="content">
                 <p>
-                  <strong>{project.name}</strong>
+                  <h5 className={`inline-block font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>
+                    <p>{project.name}</p>
+                  </h5>
                   <small> - {project.tech}</small>
                   <br />
                   {project.description}

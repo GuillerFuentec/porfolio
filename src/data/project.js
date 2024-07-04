@@ -26,7 +26,7 @@ export const webProjects = [
       url: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/quincy-larson-album-art.jpg",
       description:
         "Music player made with vanilla JS and CSS, this project was designed by freecodecamp, developed by me",
-      tech: "JS, CSS",
+      tech: "JS, HTML, CSS",
       href: "https://music-player.apparitioninc.com/"
     },
     {
@@ -34,7 +34,7 @@ export const webProjects = [
       url: calorie,
       description:
         "This is an online calorie counter",
-      tech: "JS, CSS",
+      tech: "JS, HTML, CSS",
       href: "https://counter-calories.apparitioninc.com/"
     },
     {
@@ -42,7 +42,7 @@ export const webProjects = [
       url: dice,
       description:
         "It consists of the classic dice game but online, this project was designed by freecodecamp, developed by me",
-      tech: "JS, CSS",
+      tech: "JS, HTML, CSS",
       href: "https://dice-game.apparitioninc.com/"
     },
     {
@@ -50,7 +50,7 @@ export const webProjects = [
       url: dash,
       description:
         "This is geometry dash but in the style of JavaScript, this project was designed by freecodecamp, developed by me",
-      tech: "JS, CSS",
+      tech: "JS, HTML, CSS",
       href: "http://2d-game-js.apparitioninc.com/"
     },
   ];

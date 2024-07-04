@@ -1,14 +1,13 @@
 import Layout from "@/styles/Layout";
 import Image from "next/image";
-import { logos } from "../../data/logos";
-import profile from "../../../public/main_profile.jpg";
-import {
+
+export default function About({
+  profile,
   devCertifications,
   toolsAndSoftSkillsCertifications,
-} from "../../data/certifications";
-import { exp } from "@/data/experience";
-
-export default function About() {
+  exp,
+  logos,
+}) {
   return (
     <Layout>
       <div className="flex justify-center items-center mt-14">
@@ -19,6 +18,8 @@ export default function About() {
               src={profile}
               className="pic rounded-full"
               alt="Profile picture: Guillermo Copello"
+              width={260}
+              height={260}
               priority
             />
             <div className="flex flex-col items-center mt-3">
@@ -49,11 +50,12 @@ export default function About() {
                     landing pages. I have a deep love for programming.
                   </p>
                   <p className="mb-10">
-                I am currently working on <a>cnadted.com</a>, some jobs and
-                orders from my esteemed clients and expanding my skills learning
-                JavaScript and React. All my projects are available on
-                <a>Github</a>.
-              </p>
+                    I am currently working on <a>cnadted.com</a>, some jobs and
+                    orders from my esteemed clients and expanding my skills
+                    learning JavaScript and React. All my projects are available
+                    on
+                    <a>Github</a>.
+                  </p>
                 </div>
                 <div className="mb-10">
                   <h2 className="text-xl font-bold mb-2">-Education</h2>
@@ -223,4 +225,23 @@ export default function About() {
       </main>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const profile = "/main_profile.jpg";
+  const { devCertifications, toolsAndSoftSkillsCertifications } = await import(
+    "@/data/certifications"
+  );
+  const { exp } = await import("@/data/experience");
+  const { logos } = await import("@/data/logos");
+
+  return {
+    props: {
+      profile,
+      devCertifications,
+      toolsAndSoftSkillsCertifications,
+      exp,
+      logos,
+    },
+  };
 }
