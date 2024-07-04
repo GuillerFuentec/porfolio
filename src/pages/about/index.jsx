@@ -84,11 +84,7 @@ export default function About() {
                     </li>
                   </ul>
                 </div>
-                {/* Projecto 1 */}
                 <div>
-                  {/* ******************** */}
-                  {/* CNADTED */}
-                  {/* ******************** */}
                   <h2 className="text-xl font-bold mb-4">-Experience</h2>
                   {exp.map((experience, index) => {
                     return (
@@ -105,29 +101,45 @@ export default function About() {
                           </span>
                           <br />
                           <h3>Overview:</h3>
-                          <p className="mt-2 mb-6">
-                            {experience.overview}
-                          </p>
+                          <p className="mt-2 mb-6">{experience.overview}</p>
+                          {"design" in experience ? (
+                            <>
+                              <h3 className="mt-8">Design:</h3>
+                              <p className="mt-2 mb-6">
+                                {experience.design}
+                              </p>
+                            </>
+                          ) : null}
+                          {"funtionality" in experience ? (
+                            <>
+                              <h3 className="mt-8">Functionality:</h3>
+                              <p className="mt-2 mb-6">
+                                {experience.design}
+                              </p>
+                            </>
+                          ) : null}
                           <h5 className="mt-2 mb-2">Technologies used:</h5>
                           <h6 className="mt-2 mb-2">
                             The project is built using a combination of
                             technologies including:
                           </h6>
                           <ul>
-                          {experience.tech.map((tecnology, index) => {
-                            return (<li key={index}>
-                              <strong className="text-accent">
-                                {tecnology}
-                              </strong>
-                            </li>)
-                          })}                        
+                            {experience.tech.map((tecnology, index) => {
+                              return (
+                                <li key={index}>
+                                  <strong className="text-accent">
+                                    {tecnology}
+                                  </strong>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </li>
                         <hr className="my-10" />
                         <div className="divider" />
                       </ul>
                     );
-                  })}            
+                  })}
                   <div className="my-10">
                     <h2 className="text-xl font-bold mb-2">-Certifications</h2>
                     <ul>
