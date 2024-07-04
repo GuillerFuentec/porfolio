@@ -93,7 +93,7 @@ export default function About() {
                   {exp.map((experience, index) => {
                     return (
                       <ul>
-                        <li className="text-text-decoration-none">
+                        <li className="text-text-decoration-none" key={index}>
                           <h4 className="text-xl">
                             <a>-- {experience.title}</a>
                           </h4>
