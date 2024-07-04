@@ -22,9 +22,8 @@ export default function About() {
               priority
             />
             <div className="flex flex-col items-center mt-3">
-              <h2 className="font-bold">Jr Software Developer</h2>
-              <h4>Hi there 👋</h4>
-              <h4>I am Copello, a passionate React Web developer</h4>
+              <h2 className="font-bold">Hi there 👋</h2>
+              <h4>Jr Software Developer</h4>
               <div>
                 <button className="btn btn-accent join-item my-4">
                   Download CV
@@ -43,16 +42,18 @@ export default function About() {
               <div className="mt-8">
                 <div>
                   <h2 className="text-xl font-bold mb-2">-Profile</h2>
-                  <p className="mb-10">
-                    I’m a self-taught software developer with two years of
-                    experience in web development. As a frontend developer, I
-                    work with languages such as C#, JavaScript, HTML, CSS,
-                    React, Redux, NextJS, Vite, ASP.Net, and the .Net ecosystem.
-                    I also work with Unity Engine, MonoBeheviour API and handle
-                    tools like Blender, FL Studio, Photoshop, and Adobe
-                    Premiere. Although design is not my strong suit, I strive to
-                    improve every day
+                  <p className="mb-4">
+                    I am Copello, a passionate React Web developer and with a
+                    notion of creating scripts for Unity 3D Engine, and I
+                    currently work as a freelancer doing very simple jobs like
+                    landing pages. I have a deep love for programming.
                   </p>
+                  <p className="mb-10">
+                I am currently working on <a>cnadted.com</a>, some jobs and
+                orders from my esteemed clients and expanding my skills learning
+                JavaScript and React. All my projects are available on
+                <a>Github</a>.
+              </p>
                 </div>
                 <div className="mb-10">
                   <h2 className="text-xl font-bold mb-2">-Education</h2>
@@ -84,11 +85,7 @@ export default function About() {
                     </li>
                   </ul>
                 </div>
-                {/* Projecto 1 */}
                 <div>
-                  {/* ******************** */}
-                  {/* CNADTED */}
-                  {/* ******************** */}
                   <h2 className="text-xl font-bold mb-4">-Experience</h2>
                   {exp.map((experience, index) => {
                     return (
@@ -105,22 +102,34 @@ export default function About() {
                           </span>
                           <br />
                           <h3>Overview:</h3>
-                          <p className="mt-2 mb-6">
-                            {experience.overview}
-                          </p>
+                          <p className="mt-2 mb-6">{experience.overview}</p>
+                          {"design" in experience ? (
+                            <>
+                              <h3 className="mt-8">Design:</h3>
+                              <p className="mt-2 mb-6">{experience.design}</p>
+                            </>
+                          ) : null}
+                          {"funtionality" in experience ? (
+                            <>
+                              <h3 className="mt-8">Functionality:</h3>
+                              <p className="mt-2 mb-6">{experience.design}</p>
+                            </>
+                          ) : null}
                           <h5 className="mt-2 mb-2">Technologies used:</h5>
                           <h6 className="mt-2 mb-2">
                             The project is built using a combination of
                             technologies including:
                           </h6>
                           <ul>
-                          {experience.tech.map((tecnology, index) => {
-                            return (<li key={index}>
-                              <strong className="text-accent">
-                                {tecnology}
-                              </strong>
-                            </li>)
-                          })}                        
+                            {experience.tech.map((tecnology, index) => {
+                              return (
+                                <li key={index}>
+                                  <strong className="text-accent">
+                                    {tecnology}
+                                  </strong>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </li>
                         <hr className="my-10" />
@@ -128,217 +137,6 @@ export default function About() {
                       </ul>
                     );
                   })}
-                  <ul className="mt-4">
-                    {}
-                    <li className="">
-                      <h4 className="text-xl">
-                        <a>-- Developed CNADTED website</a>
-                      </h4>
-                      <span className="flex pl-2 text-xs my-2">Jan, 2023</span>
-                      <span className="flex text-xs mb-2 -mt-2">
-                        This project is still under development
-                      </span>
-                      <br />
-                      <h3>Overview:</h3>
-                      <p className="mt-2 mb-6">
-                        CNADTED is a private, independent, non-profit entity, of
-                        a permanent nature, autonomous, of common utility,
-                        without character, affiliation, ideology or political
-                        interest, which is governed by articles 633 to 652 of
-                        the Colombian Civil Code, decree 2150 of 1995 and other
-                        concordant norms. Therefore, at no time can its assets,
-                        beneficiaries, valuations, profits or credits enter the
-                        patrimony of natural or legal persons, in the capacity
-                        of distribution of profits, nor in the event of
-                        liquidation of the entity, neither directly nor through
-                        natural or legal persons. CNADTED's resources must be
-                        exclusively destined to the fulfillment of the purposes
-                        it pursues, when they are not destined to increase its
-                        patrimony.
-                      </p>
-                      <h5 className="mt-2 mb-2">Technologies used:</h5>
-                      <h6 className="mt-2 mb-2">
-                        The project is built using a combination of technologies
-                        including:
-                      </h6>
-                      <ul>
-                        <li>
-                          <strong className="text-accent">-JavaScript</strong>
-                        </li>
-                        <li>
-                          <strong className="text-accent">-HTML</strong>
-                        </li>
-                        <li>
-                          <strong className="text-accent">-CSS</strong>
-                        </li>
-                        <li>
-                          <strong className="text-accent">-Supabase</strong>
-                        </li>
-                        <li>
-                          <strong className="text-accent">-React</strong>
-                        </li>
-                        <li>
-                          <strong className="text-accent">-Redux</strong>
-                        </li>
-                      </ul>
-                    </li>
-                    <hr className="my-10" />
-                    {/* Project 2 */}
-                    <div className="divider" />
-                    <li className="">
-                      {/* ******************** */}
-                      {/* 2D DASH JAVASCRIPT GAME */}
-                      {/* ******************** */}
-                      <article>
-                        <h4 className="text-xl">
-                          <a>-- Development of the 2D DASH JAVASCRIPT GAME</a>
-                        </h4>
-                        <span className="flex pl-2 text-xs my-2">
-                          May, 2024
-                        </span>
-                        <span className="flex text-xs mb-2 -mt-2">
-                          This project is finished
-                        </span>
-                        <h3 className="mt-8">Overview:</h3>
-                        <p className="mt-2 mb-6">
-                          In 2D DASH JAVASCRIPT GAME, you control a small iconic
-                          character that automatically moves forward through a
-                          two-dimensional level. The gameplay is
-                          straightforward: tap to jump and avoid obstacles. The
-                          challenge comes from the timing of your taps
-                        </p>
-                        <h5 className="mt-2 mb-2">Technologies used:</h5>
-                        <h6 className="mt-2 mb-2">
-                          The project is built using a combination of
-                          technologies including:
-                        </h6>
-                        <ul>
-                          <li>
-                            <strong className="text-accent">-JavaScript</strong>
-                          </li>
-                          <li>
-                            <strong className="text-accent">- HTML</strong>
-                          </li>
-                          <li>
-                            <strong className="text-accent">- CSS</strong>
-                          </li>
-                        </ul>
-                      </article>
-                    </li>
-                    <hr className="my-10" />
-                    {/* Projecto 3 */}
-                    <div className="divider" />
-                    <li className="">
-                      {/* ******************** */}
-                      {/* CALCULATOR */}
-                      {/* ******************** */}
-                      <article>
-                        <div className="mt-8"></div>
-                        <h4 className="text-xl">
-                          <a>-- UI and development of my own Calculator</a>
-                        </h4>
-                        <span className="flex pl-2 text-xs my-2">
-                          Feb, 2024
-                        </span>
-                        <span className="flex text-xs mb-2 -mt-2">
-                          This project is finished
-                        </span>
-                        <h3 className="mt-8">Overview:</h3>
-                        <p className="mt-2 mb-6">
-                          This project, developed by me, is a simple calculator
-                          application. It is part of a larger collection of
-                          projects in the Libraries-Projects repository on
-                          GitHub.
-                        </p>
-                        <h3 className="mt-8">Design:</h3>
-                        <p className="mt-2 mb-6">
-                          The calculator has a user-friendly interface that
-                          resembles a traditional handheld calculator. The
-                          buttons are clearly labeled with numbers and
-                          mathematical operations, making it easy to use even
-                          for those who are not familiar with digital calculator
-                          applications.
-                        </p>
-                        <h5 className="mt-2 mb-2">Technologies used:</h5>
-                        <h6 className="mt-2 mb-2">
-                          The project is built using a combination of
-                          technologies including:
-                        </h6>
-                        <ul>
-                          <li>
-                            <strong className="text-accent">-JavaScript</strong>
-                          </li>
-                          <li>
-                            <strong className="text-accent">- HTML</strong>
-                          </li>
-                          <li>
-                            <strong className="text-accent">- CSS</strong>
-                          </li>
-                        </ul>
-                      </article>
-                    </li>
-                    <hr className="my-10" />
-                    {/* Project 4 */}
-                    <div className="divider" />
-                    <li className="">
-                      <article>
-                        <div className="mt-8"></div>
-                        <h4 className="text-xl">
-                          {/* ******************** */}
-                          {/* DRUM MACHINE */}
-                          {/* ******************** */}
-                          <a>-- UI and development of my Drum Machine</a>
-                        </h4>
-                        <small className="flex pl-2 text-xs my-2">
-                          Feb, 2024
-                        </small>
-                        <span className="flex text-xs mb-2 -mt-2">
-                          This project is finished
-                        </span>
-                        <h3 className="mt-8">Overview:</h3>
-                        <p className="mt-2 mb-6">
-                          This project, developed by me, is a drum machine
-                          application. It is part of a larger collection of
-                          projects in the Libraries-Projects repository on
-                          GitHub.
-                        </p>
-                        <h3 className="mt-8">Design:</h3>
-                        <p className="mt-2 mb-6">
-                          The application's interface is simple and easy to use.
-                          Each button is clearly labeled with the drum sound it
-                          triggers, and the buttons are intuitively organized to
-                          facilitate rhythm creation.
-                        </p>
-                        <h3 className="mt-8">Functionality:</h3>
-                        <p className="mt-2 mb-4">
-                          The Drum Machine is an interactive application that
-                          allows users to play drum sounds. Each drum sound is
-                          triggered by clicking a corresponding button or
-                          pressing a specific key on the keyboard. The drum
-                          sounds include a variety of drum beats and cymbals,
-                          allowing users to create their own percussion music.
-                          But in this case, I added sounds from the Zelda video
-                          game, to make it a bit more different and fun.
-                        </p>
-                        <h5 className="mt-2 mb-2">Technologies used:</h5>
-                        <h6 className="mt-2 mb-2">
-                          The project is built using a combination of
-                          technologies including:
-                        </h6>
-                        <ul>
-                          <li>
-                            <strong className="text-accent">-JavaScript</strong>
-                          </li>
-                          <li>
-                            <strong className="text-accent">- HTML</strong>
-                          </li>
-                          <li>
-                            <strong className="text-accent">- CSS</strong>
-                          </li>
-                        </ul>
-                      </article>
-                    </li>
-                  </ul>
                   <div className="my-10">
                     <h2 className="text-xl font-bold mb-2">-Certifications</h2>
                     <ul>
