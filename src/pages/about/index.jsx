@@ -24,7 +24,7 @@ export default function About({
             />
             <div className="flex flex-col items-center mt-3">
               <h2 className="font-bold">Hi there 👋</h2>
-              <h4>Jr Software Developer</h4>
+              <h4>I'm Jr Software Developer</h4>
               <div>
                 <button className="btn btn-accent join-item my-4">
                   Download CV
