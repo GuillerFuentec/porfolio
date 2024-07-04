@@ -6,6 +6,7 @@ import {
   devCertifications,
   toolsAndSoftSkillsCertifications,
 } from "../../data/certifications";
+import { exp } from "@/data/experience";
 
 export default function About() {
   return (
@@ -89,7 +90,46 @@ export default function About() {
                   {/* CNADTED */}
                   {/* ******************** */}
                   <h2 className="text-xl font-bold mb-4">-Experience</h2>
+                  {exp.map((experience, index) => {
+                    return (
+                      <ul>
+                        <li className="text-text-decoration-none">
+                          <h4 className="text-xl">
+                            <a>-- {experience.title}</a>
+                          </h4>
+                          <span className="flex pl-2 text-xs my-2">
+                            {experience.date}
+                          </span>
+                          <span className="flex text-xs mb-2 -mt-2">
+                            {experience.status}
+                          </span>
+                          <br />
+                          <h3>Overview:</h3>
+                          <p className="mt-2 mb-6">
+                            {experience.overview}
+                          </p>
+                          <h5 className="mt-2 mb-2">Technologies used:</h5>
+                          <h6 className="mt-2 mb-2">
+                            The project is built using a combination of
+                            technologies including:
+                          </h6>
+                          <ul>
+                          {experience.tech.map((tecnology, index) => {
+                            return (<li key={index}>
+                              <strong className="text-accent">
+                                {tecnology}
+                              </strong>
+                            </li>)
+                          })}                        
+                          </ul>
+                        </li>
+                        <hr className="my-10" />
+                        <div className="divider" />
+                      </ul>
+                    );
+                  })}
                   <ul className="mt-4">
+                    {}
                     <li className="">
                       <h4 className="text-xl">
                         <a>-- Developed CNADTED website</a>
@@ -126,19 +166,19 @@ export default function About() {
                           <strong className="text-accent">-JavaScript</strong>
                         </li>
                         <li>
-                          <strong className="text-accent">- HTML</strong>
+                          <strong className="text-accent">-HTML</strong>
                         </li>
                         <li>
-                          <strong className="text-accent">- CSS</strong>
+                          <strong className="text-accent">-CSS</strong>
                         </li>
                         <li>
-                          <strong className="text-accent">- Supabase</strong>
+                          <strong className="text-accent">-Supabase</strong>
                         </li>
                         <li>
-                          <strong className="text-accent">- React</strong>
+                          <strong className="text-accent">-React</strong>
                         </li>
                         <li>
-                          <strong className="text-accent">- Redux</strong>
+                          <strong className="text-accent">-Redux</strong>
                         </li>
                       </ul>
                     </li>
